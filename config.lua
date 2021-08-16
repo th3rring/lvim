@@ -1,4 +1,4 @@
--- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
+-- Author: Thomas Herring
 
 -- general
 lvim.format_on_save = true
@@ -39,7 +39,6 @@ lvim.leader = "space"
 -- }
 lvim.builtin.which_key.mappings["S"] = { ":SymbolsOutline<cr>", "Symbols"}
 
--- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
 lvim.builtin.dashboard.active = true
 lvim.builtin.terminal.active = true
@@ -84,10 +83,12 @@ lvim.lang.cpp.formatters = lvim.lang.c.formatters
 lvim.lang.cpp.linters = {{exe = "clang-tidy"}}
 lvim.lang.cpp.linters = lvim.lang.c.linters
 
--- lvim.lang.cpp.lsp.setup.cmd = {"clangd", "--background-index", "--log=verbose"}
-table.insert(lvim.lang.cpp.lsp.setup.cmd, "--log=verbose")
+-- Uncomment below to enable clangd verbose debuging output.
+-- Use `lnav` on /home/therring/.cache/nvim/lsp.log to see output.
+-- table.insert(lvim.lang.cpp.lsp.setup.cmd, "--log=verbose")
 
-
+-- Uncomment to enable lvim logging for everything.
+-- As of Aug. 16, 2021 this didn't work.
 -- lvim.log.level = debug
 
 -- Additional Plugins

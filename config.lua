@@ -79,12 +79,16 @@ lvim.builtin.treesitter.highlight.enabled = true
 
 lvim.lsp.diagnostics.virtual_text = false
 
-
 lvim.lang.cpp.formatters = {{exe = "clang-format"}}
 lvim.lang.cpp.formatters = lvim.lang.c.formatters
 lvim.lang.cpp.linters = {{exe = "clang-tidy"}}
 lvim.lang.cpp.linters = lvim.lang.c.linters
 
+-- lvim.lang.cpp.lsp.setup.cmd = {"clangd", "--background-index", "--log=verbose"}
+table.insert(lvim.lang.cpp.lsp.setup.cmd, "--log=verbose")
+
+
+-- lvim.log.level = debug
 
 -- Additional Plugins
 -- lvim.plugins = {
